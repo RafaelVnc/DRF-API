@@ -65,6 +65,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 
 ###
 
+GET http://127.0.0.1:8000/orders/74b00f00-330d-490e-ba7a-a15facc14974 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxMDA3NzM5LCJpYXQiOjE3NzEwMDc0MzksImp0aSI6IjljYzY2NWQ3NDIxMjQ4MjNhMzEwN2IzYjQ2OWQzNGNjIiwidXNlcl9pZCI6IjEifQ.V2raaRGiTh1Svwt5qus6jUfwjGfkDfxxnWCgA5y5d0E
+
+###
+
 POST http://127.0.0.1:8000/orders/ HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxMDA1NDgwLCJpYXQiOjE3NzEwMDUxODAsImp0aSI6ImUxNDhkMWIyZWI1YjRjYmU5N2Q0YjcxYTgzZTIwZTRiIiwidXNlcl9pZCI6IjEifQ.WHyirPUjGl3tgcF7haZGz8UOkAJHNq9PKMM4SD7K1cs
@@ -82,3 +87,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
         }
     ]
 }
+
+###
+
+PUT http://127.0.0.1:8000/orders/74b00f00-330d-490e-ba7a-a15facc14974/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxMDA3NzM5LCJpYXQiOjE3NzEwMDc0MzksImp0aSI6IjljYzY2NWQ3NDIxMjQ4MjNhMzEwN2IzYjQ2OWQzNGNjIiwidXNlcl9pZCI6IjEifQ.V2raaRGiTh1Svwt5qus6jUfwjGfkDfxxnWCgA5y5d0E
+
+{
+    "status": "Pending",
+    "items": [
+        {
+            "product":4,
+            "quantity":3
+        },
+        {
+            "product":3,
+            "quantity":5
+        }
+    ]
+}
+
+###
+
+DELETE http://127.0.0.1:8000/orders/74b00f00-330d-490e-ba7a-a15facc14974/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxMDA3NzM5LCJpYXQiOjE3NzEwMDc0MzksImp0aSI6IjljYzY2NWQ3NDIxMjQ4MjNhMzEwN2IzYjQ2OWQzNGNjIiwidXNlcl9pZCI6IjEifQ.V2raaRGiTh1Svwt5qus6jUfwjGfkDfxxnWCgA5y5d0E
